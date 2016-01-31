@@ -81,11 +81,14 @@ appropiatelyLabelling <- function(dataset) {
         colNames <- colnames(dataset)
         colNames <- sub("^t", "time", colNames)
         colNames <- sub("^f", "frequency", colNames)
-        colNames <- sub("std", "standardDeviation", colNames)
-        colNames <- sub("Acc", "Acceleration", colNames)
-        colNames <- sub("Gyro", "Gyroscope", colNames)
-        colNames <- sub("Mag", "Magnitude", colNames)
-        colNames <- sub("Freq", "Frequency", colNames)
+        colNames <- gsub("std", "standardDeviation", colNames)
+        colNames <- gsub("Acc", "Acceleration", colNames)
+        colNames <- gsub("Gyro", "Gyroscope", colNames)
+        colNames <- gsub("Mag", "Magnitude", colNames)
+        colNames <- gsub("Freq", "Frequency", colNames)
+        colNames <- gsub("-", "", colNames)
+        colNames <- gsub("[(]", "", colNames)
+        colNames <- gsub("[])]", "", colNames)
         colnames(dataset) <- colNames
         dataset
 }
