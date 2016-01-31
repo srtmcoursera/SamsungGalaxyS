@@ -40,3 +40,29 @@ Use of this dataset in publications must be acknowledged by referencing the foll
 This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
+
+### Analysis and cleaning of the dataset
+
+Analysis of the dataset is carried on by the 'run_analysis.R' script, calling higher level function:
+
+        run_analysys()
+
+What this function does is to perform the analysis and cleaning process of the Samsung Galaxy S data set, following steps described next:
+
+1. For the test data set, reads subject IDs, activity IDs, measurement data, and combines them by columns as a single data set.
+
+2. For the train data set, reads subject IDs, activity IDs, measurement data, and combines them by columns as a single data set.
+
+3. Combines both test and train data to create one single data set.
+
+4. Sets the original column names for the subject IDs, activity IDs, and measurement data.
+
+5. Extracts only the measurements on the mean and standard deviation for each measurement of the dataset.
+
+6. Decodes dataset activity IDs to their corresponding activity labels.
+
+7. Modifies dataset labels to be more appropiate/descriptive.
+
+8. Creates a tidy data set from the given data, with the average of each variable for each activity and each subject.
+
+9. Returns this cleaned dataset.
