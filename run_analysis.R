@@ -88,7 +88,7 @@ appropiatelyLabelling <- function(dataset) {
         colNames <- gsub("Freq", "Frequency", colNames)
         colNames <- gsub("-", "", colNames)
         colNames <- gsub("[(]", "", colNames)
-        colNames <- gsub("[])]", "", colNames)
+        colNames <- gsub("[)]", "", colNames)
         colnames(dataset) <- colNames
         dataset
 }
